@@ -1,0 +1,249 @@
+{
+ "n_rows": 100000,
+ "n_machines": 50,
+ "date_min": "2025-01-01 00:00:00",
+ "date_max": "2025-03-10 10:39:00",
+ "class_counts": {
+  "Low": 77825,
+  "Medium": 19189,
+  "High": 2986
+ },
+ "majority_baseline_test": 0.77995,
+ "scenarioA": {
+  "Logistic Regression": {
+   "accuracy": 0.92345,
+   "balanced_accuracy": 0.9275411751578556,
+   "macro_f1": 0.8580473209385064,
+   "cv_macro_f1_mean": 0.8588456911254263,
+   "cv_macro_f1_std": 0.0031331828740566413,
+   "confusion": [
+    [
+     14486,
+     1113,
+     0
+    ],
+    [
+     124,
+     3399,
+     268
+    ],
+    [
+     0,
+     26,
+     584
+    ]
+   ]
+  },
+  "Random Forest": {
+   "accuracy": 1.0,
+   "balanced_accuracy": 1.0,
+   "macro_f1": 1.0,
+   "cv_macro_f1_mean": 0.9990474143887548,
+   "cv_macro_f1_std": 0.0006846271180366406,
+   "confusion": [
+    [
+     15599,
+     0,
+     0
+    ],
+    [
+     0,
+     3791,
+     0
+    ],
+    [
+     0,
+     0,
+     610
+    ]
+   ]
+  },
+  "Gradient Boosting": {
+   "accuracy": 0.9992,
+   "balanced_accuracy": 0.9952577882016032,
+   "macro_f1": 0.9970118050802407,
+   "cv_macro_f1_mean": 0.9963643340680485,
+   "cv_macro_f1_std": 0.0013545879104894258,
+   "confusion": [
+    [
+     15594,
+     5,
+     0
+    ],
+    [
+     3,
+     3788,
+     0
+    ],
+    [
+     0,
+     8,
+     602
+    ]
+   ]
+  }
+ },
+ "scenarioB": {
+  "Logistic Regression": {
+   "accuracy": 0.3016,
+   "balanced_accuracy": 0.33073395478163525,
+   "macro_f1": 0.23900883502554252,
+   "cv_macro_f1_mean": 0.2302316472755198,
+   "cv_macro_f1_std": 0.009707404857977234,
+   "confusion": [
+    [
+     4770,
+     4092,
+     6737
+    ],
+    [
+     1157,
+     1005,
+     1629
+    ],
+    [
+     184,
+     169,
+     257
+    ]
+   ]
+  },
+  "Random Forest": {
+   "accuracy": 0.3466,
+   "balanced_accuracy": 0.32664777535303374,
+   "macro_f1": 0.2594163925717173,
+   "cv_macro_f1_mean": 0.2596697289001304,
+   "cv_macro_f1_std": 0.006075184214197392,
+   "confusion": [
+    [
+     5421,
+     5557,
+     4621
+    ],
+    [
+     1339,
+     1341,
+     1111
+    ],
+    [
+     224,
+     216,
+     170
+    ]
+   ]
+  },
+  "Gradient Boosting": {
+   "accuracy": 0.33435,
+   "balanced_accuracy": 0.3435248437078504,
+   "macro_f1": 0.2573523775780422,
+   "cv_macro_f1_mean": 0.27135748909544494,
+   "cv_macro_f1_std": 0.003457092466408483,
+   "confusion": [
+    [
+     5078,
+     5723,
+     4798
+    ],
+    [
+     1247,
+     1405,
+     1139
+    ],
+    [
+     194,
+     212,
+     204
+    ]
+   ]
+  }
+ },
+ "rolling_extension": {
+  "macro_f1": 0.26622769200827373,
+  "accuracy": 0.36275
+ },
+ "importanceA": {
+  "error_rate": 0.5522299511818302,
+  "speed": 0.4033799014738035,
+  "error_to_output": 0.23212103841508824,
+  "temperature": 0.0,
+  "vibration": 0.0,
+  "power": 0.0,
+  "packet_loss": 0.0,
+  "latency": 0.0,
+  "defect_rate": 0.0,
+  "maint_score": 0.0
+ },
+ "importanceB": {
+  "temperature": 0.0020452335188311057,
+  "mode_Active": 0.0013052204100302462,
+  "vibration": 0.0006525487118308101,
+  "mode_Idle": 0.00032641112547389845,
+  "mode_Maintenance": -0.000201682552123957,
+  "defect_rate": -0.0006552371341714824,
+  "thermal_vibration_load": -0.001095011759472168,
+  "sensor_stress_index": -0.0015700552974444726,
+  "packet_loss": -0.0020399712713920306,
+  "latency": -0.0024131945655383826
+ },
+ "groupA": {
+  "Production (speed, error rate)": 0.6566877449663654,
+  "Quality (defect rate)": 0.0,
+  "Sensors (temp, vibration, power, maint.)": 0.0,
+  "6G network (latency, packet loss)": 0.0
+ },
+ "groupB": {
+  "Quality (defect rate)": -0.0010214392335611833,
+  "Sensors (temp, vibration, power, maint.)": -0.00983617922390101,
+  "6G network (latency, packet loss)": -0.005398891880791253
+ },
+ "mode_mix": {
+  "Low": {
+   "Active": 77.7,
+   "Idle": 78.25,
+   "Maintenance": 77.82
+  },
+  "Medium": {
+   "Active": 19.27,
+   "Idle": 18.91,
+   "Maintenance": 19.22
+  },
+  "High": {
+   "Active": 3.03,
+   "Idle": 2.84,
+   "Maintenance": 2.95
+  }
+ },
+ "rule_check": {
+  "High": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 610.0
+  },
+  "Low": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 15599.0
+  },
+  "Medium": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 3791.0
+  },
+  "accuracy": 1.0,
+  "macro avg": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20000.0
+  },
+  "weighted avg": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20000.0
+  }
+ }
+}
